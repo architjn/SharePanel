@@ -7,7 +7,7 @@ Library supports OS on API 15 and above.
 
 ![Showcase Video](demo.gif)
 
-Try APK : [Download](app\build\outputs\apk)
+Try APK : [Download](demo.apk)
 
 Add it in your root build.gradle at the end of repositories:
 
