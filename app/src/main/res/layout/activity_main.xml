@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop"
+                app:layout_collapseMode="parallax" />
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin" />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="@string/lipsum" />
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <com.architjn.sharepanel.SharePanel
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:app_layout_anchor="@id/collapsing_toolbar"
+        app:app_layout_anchorGravity="bottom|right|end">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.varunest.sparkbutton.SparkButton
+                android:id="@+id/twitter_button"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:sparkbutton_activeImage="@drawable/ic_twitter"
+                app:sparkbutton_iconSize="20dp"
+                app:sparkbutton_primaryColor="@color/twitter_primary_color"
+                app:sparkbutton_secondaryColor="@color/twitter_secondary_color" />
+
+            <com.varunest.sparkbutton.SparkButton
+                android:id="@+id/fb_button"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:sparkbutton_activeImage="@drawable/ic_facebook"
+                app:sparkbutton_iconSize="20dp"
+                app:sparkbutton_primaryColor="@color/fb_primary_color"
+                app:sparkbutton_secondaryColor="@color/fb_secondary_color" />
+        </LinearLayout>
+    </com.architjn.sharepanel.SharePanel>
+</android.support.design.widget.CoordinatorLayout>

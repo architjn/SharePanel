@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SharePanelAttrs">
+        <attr name="app_layout_anchor" format="reference" />
+        <attr name="app_layout_anchorGravity">
+            <flag name="right" value="0x05" />
+            <flag name="bottom" value="0x50" />
+            <flag name="left" value="0x03" />
+            <flag name="top" value="0x30" />
+            <flag name="start" value="0x00800003" />
+            <flag name="end" value="0x00800005" />
+        </attr>
+    </declare-styleable>
+</resources>
