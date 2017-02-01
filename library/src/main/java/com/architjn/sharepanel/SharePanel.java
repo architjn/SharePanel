@@ -48,7 +48,8 @@ public class SharePanel extends CardView {
             parentView.addView(hookView);
             if (attrs != null) {
                 CoordinatorLayout.LayoutParams lp = (CoordinatorLayout.LayoutParams) hookView.getLayoutParams();
-                lp.anchorGravity = Gravity.RIGHT | Gravity.END | Gravity.BOTTOM;
+                lp.anchorGravity = ta.getInteger(R.styleable.SharePanelAttrs_app_layout_anchorGravity,
+                        Gravity.RIGHT | Gravity.END | Gravity.BOTTOM);
                 lp.setAnchorId(ta.getResourceId(R.styleable.SharePanelAttrs_app_layout_anchor, -1));
                 hookView.setLayoutParams(lp);
             }
