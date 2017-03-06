@@ -45,6 +45,8 @@ public class SharePanel extends CardView {
         super.onLayout(changed, left, top, right, bottom);
         if (getParent() instanceof CoordinatorLayout) {
             parentView = ((CoordinatorLayout) getParent());
+            if (hookView.getParent() != null)
+                ((ViewGroup) hookView.getParent()).removeView(hookView);
             parentView.addView(hookView);
             if (attrs != null) {
                 CoordinatorLayout.LayoutParams lp = (CoordinatorLayout.LayoutParams) hookView.getLayoutParams();
